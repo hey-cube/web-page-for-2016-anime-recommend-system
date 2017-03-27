@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/* common */
+body {
+	font-family: Verdana, sans-serif;
+	font-size: 16px;
+	line-height: 2em;
+	letter-spacing:1.6pt;
+	color: rgb(230, 230, 230);
+	background-color: rgb(10, 10, 10);
+}
+
+/* title */
+#title {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 1.3em;
+	letter-spacing: 0pt;
+}
+
+span.kanji {
+	letter-spacing: 1.5pt;
+}
+
+/* content */
+#content {
+	padding-bottom: 50px;
+}
+
+/* button */
+#to-desc {
+	letter-spacing: 3pt;
+	width: 30%;
+	margin-left: 35%;
+	margin-bottom: 70px;
+}
