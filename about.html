@@ -8,20 +8,47 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="app_icon.png" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="icon">
   </head>
 
   <body>
-    <div id="header" class="container" style="background:red;">header</div>
+    <div class="container" id="content">
+      <h2>本サイトについて</h2>
+      <p>筑波大学情報学群情報科学類の授業にて作成された、2016アニメ推薦システムを公開するためのサイトです。</p>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 hidden-xs" style="background:pink;">Side1</div>
-        <div class="col-sm-6 col-xs-6" style="background:green;">Main</div>
-        <div class="col-sm-3 col-xs-6" style="background:orange;">Side2</div>
-      </div>
+      <h2>2016アニメ推薦システムについて</h2>
+      <p>2016年に放送されたアニメ100タイトルの中から、あなたにオススメのアニメを推薦するシステムです。</p>
+      <p>筑波大学情報学群情報科学類の授業『主専攻実験　機械学習による推薦アルゴリズム』にて作成されました。</p>
+      <p>ユーザ間類似度に基づく推薦のアルゴリズムであるGroup Lens法に基づいており、Java言語を用いて実装されています。</p>
+
+      <h2>実装の詳細</h2>
+      <p>Group Lens法の簡単な解説や、具体的な実装方針は<a href="http://qiita.com/hey_cube/items/hoge">Qiita</a>にまとめています。</p>
+      <p>よろしければご覧下さい。</p>
+
+      <h2>謝辞</h2>
+      <p>本実験に際して、学習に必要なデータを提供した下さった皆様、データ収集用のフォームをシェアして下さった皆様に深く感謝致します。</p>
     </div>
 
-    <div id="footer" class="container" style="background:blue;">footer</div>
+    <div class="container text-center">
+      <div class="col-xs-2 col-sm-3"></div>
+      <a class="btn btn-primary col-xs-8 col-sm-6" id="to-desc" href="index.html">
+        ホームへ戻る <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+      </a>
+      <div class="col-xs-2 col-sm-3"></div>
+    </div>
+
+    <footer class="footer">
+      <hr>
+      <div  class="container, text-center">
+        <a href="about.html" class="col-xs-4">About</a>
+        <a href="credits.html" class="col-xs-4">Credits</a>
+        <a href="contact.html" class="col-xs-4">Contact</a>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
