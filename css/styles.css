@@ -7,7 +7,7 @@ body {
 	line-height: 2em;
 	letter-spacing:1.6pt;
 	color: rgb(230, 230, 230);
-	background-color: rgb(10, 10, 10);
+	background: linear-gradient(rgb(50, 50, 50), rgb(0, 0, 0));
 }
 
 /* title */
@@ -28,13 +28,26 @@ span.kanji {
 
 /* content */
 #content {
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 }
 
 /* button */
 #to-desc {
 	letter-spacing: 3pt;
-	width: 30%;
-	margin-left: 35%;
 	margin-bottom: 70px;
+	box-shadow: 0px 1px 3px 0px rgb(0, 50, 200);
+
+text-decoration: none;
+-webkit-transition-property: background,color;
+-webkit-transition-duration: 1s;
+-webkit-transition-delay: 0s;
+-webkit-transition-timing-function: ease;
+-moz-transition-property: background,color;
+-moz-transition-duration: 1s;
+-moz-transition-delay: 0s;
+-moz-transition-timing-function: ease;
+-o-transition-property: background,color;
+-o-transition-duration: 1s;
+-o-transition-delay: 0s;
+-o-transition-timing-function: ease;
 }
