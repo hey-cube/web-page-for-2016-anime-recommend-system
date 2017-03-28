@@ -41,13 +41,14 @@ h2 span.kanji {
 
 /* content */
 #content {
-	padding-bottom: 20px;
 	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 /* button */
-#to-desc {
+#button {
 	letter-spacing: 3pt;
+	margin-top: 10px;
 	margin-bottom: 60px;
 	box-shadow: 0px 1px 3px 0px rgb(0, 50, 200);
 
@@ -64,4 +65,10 @@ text-decoration: none;
 -o-transition-duration: 1s;
 -o-transition-delay: 0s;
 -o-transition-timing-function: ease;
+}
+
+/* form */
+form {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }

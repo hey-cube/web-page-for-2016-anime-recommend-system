@@ -8,20 +8,69 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="app_icon.png" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="icon">
   </head>
 
   <body>
-    <div id="header" class="container" style="background:red;">header</div>
+    <div class="container" id="content">
+      <p>サイトの不具合やご質問等ありましたらこちらからご連絡下さい。</p>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="name" class="control-label col-sm-3">お名前:</label>
+          <div class="col-sm-9">
+            <input type="text" id="name" class="form-control" placeholder="ハンドルネーム可">
+          </div>
+        </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 hidden-xs" style="background:pink;">Side1</div>
-        <div class="col-sm-6 col-xs-6" style="background:green;">Main</div>
-        <div class="col-sm-3 col-xs-6" style="background:orange;">Side2</div>
-      </div>
+        <div class="form-group">
+          <label for="address" class="control-label col-sm-3">メールアドレス:</label>
+          <div class="col-sm-9">
+            <input type="text" id="address" class="form-control" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="selection" class="control-label col-sm-3">種類:</label>
+          <div class="col-sm-9">
+            <select id="selection" class="form-control">
+              <option>サイトの不具合
+              <option>推薦システムの不具合
+              <option>質問
+              <option>その他
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="main" class="control-label col-sm-3">本文:</label>
+          <div class="col-sm-9">
+            <textarea type="text" id="main" class="form-control" rows="10"></textarea>
+          </div>
+        </div>
+
+        <div class="col-xs-3 col-sm-4"></div>
+        <button type="submit" class="btn btn-primary col-xs-6 col-sm-4" id="button">
+          送信 <i class="fa fa-paper-plane" aria-hidden="true"></i>
+        </button>
+        <div class="col-xs-3 col-sm-4"></div>
+      </form>
     </div>
 
-    <div id="footer" class="container" style="background:blue;">footer</div>
+    <div class="container text-center">
+    </div>
+
+    <footer class="footer">
+      <hr>
+      <div  class="container, text-center">
+        <a href="index.html" class="col-xs-4">Home</a>
+        <a href="about.html" class="col-xs-4">About</a>
+        <a href="contact.html" class="col-xs-4">Contact</a>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
