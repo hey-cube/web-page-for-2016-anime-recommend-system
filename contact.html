@@ -21,27 +21,26 @@
   <body>
     <div class="container" id="content">
       <p>サイトの不具合やご質問等ありましたらこちらからご連絡下さい。</p>
-      <p>送信に失敗した場合は、申し訳ありませんがs1411396(AT)u.tsukuba.ac.jpまで直接ご連絡下さい。</p>
 
-      <form class="form-horizontal" action="send.php" method="post">
+      <form class="form-horizontal">
         <div class="form-group">
           <label for="name" class="control-label col-sm-3">お名前:</label>
           <div class="col-sm-9">
-            <input type="text" name="name" class="form-control" value="" required="required" placeholder="ハンドルネーム可">
+            <input type="text" id="name" class="form-control" required="required" placeholder="ハンドルネーム可">
           </div>
         </div>
 
         <div class="form-group">
           <label for="address" class="control-label col-sm-3">メールアドレス:</label>
           <div class="col-sm-9">
-            <input type="email" name="address" class="form-control" value="" required="required">
+            <input type="email" id="address" class="form-control" required="required">
           </div>
         </div>
 
         <div class="form-group">
           <label for="selection" class="control-label col-sm-3">種類:</label>
           <div class="col-sm-9">
-            <select name="selection" class="form-control" value="">
+            <select id="selection" class="form-control">
               <option disabled="disabled" selected="selected">未選択
               <option>サイトの不具合
               <option>推薦システムの不具合
@@ -54,12 +53,12 @@
         <div class="form-group">
           <label for="main" class="control-label col-sm-3">本文:</label>
           <div class="col-sm-9">
-            <textarea type="text" name="main" class="form-control" rows="10" required="required"></textarea>
+            <textarea type="text" id="main" class="form-control" rows="10" required="required"></textarea>
           </div>
         </div>
 
         <div class="col-xs-3 col-sm-4"></div>
-        <button type="submit" name="button" class="btn btn-primary col-xs-6 col-sm-4">
+        <button type="submit" class="btn btn-primary col-xs-6 col-sm-4" id="button">
           送信 <i class="fa fa-paper-plane" aria-hidden="true"></i>
         </button>
         <div class="col-xs-3 col-sm-4"></div>
