@@ -4,24 +4,81 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>詳しい説明 | 2016アニメ推薦システム</title>
+    <title>詳しい説明 | 2015アニメ推薦システム</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="app_icon.png" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="icon">
   </head>
 
   <body>
-    <div id="header" class="container" style="background:red;">header</div>
+    <div class="container" id="content">
+      <h2>詳しい説明</h2>
+      <p>次のページに移動すると、2015年度のテレビアニメが100タイトル並んでいます。</p>
+      <p>それぞれを以下の6段階で評価して下さい。</p>
+      <br>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 hidden-xs" style="background:pink;">Side1</div>
-        <div class="col-sm-6 col-xs-6" style="background:green;">Main</div>
-        <div class="col-sm-3 col-xs-6" style="background:orange;">Side2</div>
+      <div class="container">
+        <div class="col-xs-0 col-sm-2"></div>
+        <div class=" col-xs-12 col-sm-8">
+          <table class="table table-bordered">
+            <tr><td>0</td><td>まだ見ていない</td></tr>
+            <tr><td>1</td><td>つまらない</td></tr>
+            <tr><td>2</td><td>どちらかと言えばつまらない</td></tr>
+            <tr><td>3</td><td>普通</td></tr>
+            <tr><td>4</td><td>面白い</td></tr>
+            <tr><td>5</td><td>神</td></tr>
+          </table>
+        </div>
+        <div class="col-xs-0 col-sm-2"></div>
       </div>
+      <br>
+
+      <p>一話でも見ていれば評価して頂いて構いません。</p>
+      <p>評価に応じて、まだ見ていないタイトルの中からあなたの嗜好に合うアニメを探します。</p>
+
+      <h2>注意事項</h2>
+      <p>見たことのあるアニメが2つ以上ない場合、推薦することができません。</p>
+      <p>また、推薦結果に対して当サイトはいかなる責任も負いません。</p>
+      <p>ご了承下さい。</p>
+
+      <h2>Q&A</h2>
+      <p>Q. ここで入力した内容は何かに使われる？</p>
+      <p>A. アニメの評価に関する入力はあなたへの推薦にのみ使われます。</p>
+      <br>
+      <p>Q. 俺の好きなタイトルがないんだけど？</p>
+      <p>A. 申し訳ありません。そのタイトルはあまり人気ではないようです。</p>
+      <br>
+      <p>Q. どうしてごちうさが二期しかないんだよ。</p>
+      <p>A. 今回の対象は2015年度のアニメのみです。ご了承下さい。</p>
+      <br>
+      <p>Q. 神以上の評価がしたい場合はどうすれば・・・。</p>
+      <p>A. 是非ご自分で7段階評価での推薦アルゴリズムをお作り下さい。</p>
     </div>
 
-    <div id="footer" class="container" style="background:blue;">footer</div>
+    <div class="container text-center">
+      <div class="col-xs-2 col-sm-3"></div>
+      <a class="btn btn-primary col-xs-8 col-sm-6" id="button" href="description.html">
+        やってみる <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+      </a>
+      <div class="col-xs-2 col-sm-3"></div>
+    </div>
+
+    <footer class="footer">
+      <hr>
+      <div  class="container, text-center">
+        <a href="index.html" class="col-xs-4">Home</a>
+        <a href="about.html" class="col-xs-4">About</a>
+        <a href="contact.html" class="col-xs-4">Contact</a>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
