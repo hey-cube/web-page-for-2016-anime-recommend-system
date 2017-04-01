@@ -20,7 +20,7 @@
 
   <body>
     <div class="container" id="content">
-      <!-- どうすれば良いんですかね？ -->
+      <!-- phpからシェルコマンドを実行することでJavaプログラムを実行 -->
     </div>
 
     <footer class="footer">
