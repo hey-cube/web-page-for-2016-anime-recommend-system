@@ -8,20 +8,68 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sticky-footer.css" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="app_icon.png" rel="apple-touch-icon">
+    <link href="favicon.ico" rel="icon">
   </head>
 
   <body>
-    <div id="header" class="container" style="background:red;">header</div>
+    <div class="container" id="content">
+      <p>以下のアニメを6段階で評価して下さい。</p>
+      <p>（このページの説明は<a href="description.html">こちら</a>）</p>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3 hidden-xs" style="background:pink;">Side1</div>
-        <div class="col-sm-6 col-xs-6" style="background:green;">Main</div>
-        <div class="col-sm-3 col-xs-6" style="background:orange;">Side2</div>
+      <!-- ここから -->
+      <div class="container">
+        <div class="col-sm-7">ごちうさ</div>
+        <div class="btn-group col-sm-5" data-toggle="buttons">
+          <label class="btn btn-info active">
+            <input type="radio" autocomplete="off" checked> 0
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" autocomplete="off"> 1
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" autocomplete="off"> 2
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" autocomplete="off"> 3
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" autocomplete="off"> 4
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" autocomplete="off"> 5
+          </label>
+        </div>
       </div>
+      <hr>
+      <!-- ここまで -->
+      
+      <!-- 繰り返し -->
+
     </div>
 
-    <div id="footer" class="container" style="background:blue;">footer</div>
+    <div class="container text-center">
+      <div class="col-xs-2 col-sm-3"></div>
+      <a class="btn btn-primary col-xs-8 col-sm-6" href="result.html">
+        結果を見る <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+      </a>
+      <div class="col-xs-2 col-sm-3"></div>
+    </div>
+
+    <footer class="footer">
+      <hr>
+      <div  class="container, text-center">
+        <a href="index.html" class="col-xs-4">Home</a>
+        <a href="about.html" class="col-xs-4">About</a>
+        <a href="contact.html" class="col-xs-4">Contact</a>
+      </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
