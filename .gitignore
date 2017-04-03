@@ -8,11 +8,12 @@ fonts/
 
 js/
 
+group_lens/
+
 app_icon.png
 favicon.ico
 
+title.txt
+
 *.java
 *.class
-*.jar
-
-title.txt

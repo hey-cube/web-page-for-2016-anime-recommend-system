@@ -1,4 +1,28 @@
 <!DOCTYPE html>
+<!-- phpからシェルコマンドを実行することでJavaプログラムを実行 -->
+<?php
+// classファイルのファイルパス
+$classFilePath = "group_lens/ AnimeRecommender";
+
+// 引数
+$args = " ";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $args = $args . implode(" ", $_POST);
+} else {
+  exit("error: 不正な入力");
+}
+
+// シェルのメタ文字をエスケープ
+$cmd = escapeshellcmd("java -classpath " . $classFilePath . $args);
+
+// コマンドを実行して出力の文字列を取得
+$result = mb_convert_encoding(shell_exec($cmd), "sjis-win");
+$result = mb_convert_encoding($result, "UTF-8", "sjis-win");
+if ($result == false) {
+  exit("error: アニメの推薦に失敗");
+}
+?>
+
 <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -20,7 +44,9 @@
 
   <body>
     <div class="container" id="content">
-      <!-- phpからシェルコマンドを実行することでJavaプログラムを実行 -->
+      <p>
+        あなたにおすすめのアニメは <?php echo $result; ?> です。
+      </p>
     </div>
 
     <footer class="footer">
