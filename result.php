@@ -34,9 +34,6 @@ $top_titles = array();
 foreach ($ids as $id) {
   $top_titles[] = $titles[$id - 1];
 }
-
-print_r($top_titles);
-print_r($ratings);
 ?>
 
 <html lang="ja">
@@ -60,7 +57,51 @@ print_r($ratings);
 
   <body>
     <div class="container" id="content">
-      <p>あなたにおすすめのアニメは <?php echo $result; ?> です。</p>
+      <p>あなたに最もおすすめのアニメは<?php echo $top_titles[0]; ?>です。</p>
+
+      <a href="https://twitter.com/share" class="twitter-share-button"
+      data-url="http://hoge"
+      data-text="私がおすすめされたアニメは<?php echo $top_titles[0]; ?>でした">
+        Tweet
+      </a>
+      <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+      </script>
+      <br>
+
+      <div class="fb-share-button"
+      data-href="https://hoge"
+      data-layout="button_count" data-size="small" data-mobile-iframe="true">
+        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhoge%2F&amp;src=sdkpreparse">
+          シェア
+        </a>
+      </div>
+
+      <div class="frame">
+        <img class="img-responsive center-block shadow"
+        src="animeImage/<?php echo $ids[0] ?>.jpg" alt="<?php echo $top_titles[0]; ?>"
+        width="60%" height="60%">
+      </div>
+      <br>
+
+      <p>また、おすすめのアニメTOP5と評価の推定値は以下の通りです。</p>
+      <br>
+
+      <table class="table table-bordered">
+        <?php
+        for ($i = 0; $i < 5; $i++) {
+          echo "<tr><td>" . $top_titles[$i] . "</td><td>" . round($ratings[$i], 5) . "</td></tr>";
+        }
+        ?>
+      </table>
+    </div>
+
+    <div class="container">
+      <div class="col-xs-2 col-sm-3"></div>
+      <a class="btn btn-primary col-xs-8 col-sm-6" href="input.html">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i> もう一回やってみる
+      </a>
+      <div class="col-xs-2 col-sm-3"></div>
     </div>
 
     <footer class="footer">
@@ -74,5 +115,13 @@ print_r($ratings);
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.8";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
   </body>
 </html>
