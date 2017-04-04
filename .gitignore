@@ -13,7 +13,7 @@ group_lens/
 app_icon.png
 favicon.ico
 
-title.txt
+titles.txt
 
 *.java
 *.class

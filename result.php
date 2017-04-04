@@ -16,11 +16,27 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 $cmd = escapeshellcmd("java -classpath " . $classFilePath . $args);
 
 // コマンドを実行して出力の文字列を取得
-$result = mb_convert_encoding(shell_exec($cmd), "sjis-win");
-$result = mb_convert_encoding($result, "UTF-8", "sjis-win");
+$result = shell_exec($cmd);
 if ($result == false) {
   exit("error: アニメの推薦に失敗");
 }
+
+// $resultからアニメのIDと推定Ratingを取得
+$tmp = explode("/", $result);
+$ids = explode(":", $tmp[0]);
+$ratings = explode(":", $tmp[1]);
+
+// アニメタイトルを配列に格納
+$titles = file("titles.txt", FILE_IGNORE_NEW_LINES);
+
+// 推薦するアニメのタイトルを取得
+$top_titles = array();
+foreach ($ids as $id) {
+  $top_titles[] = $titles[$id - 1];
+}
+
+print_r($top_titles);
+print_r($ratings);
 ?>
 
 <html lang="ja">
@@ -44,9 +60,7 @@ if ($result == false) {
 
   <body>
     <div class="container" id="content">
-      <p>
-        あなたにおすすめのアニメは <?php echo $result; ?> です。
-      </p>
+      <p>あなたにおすすめのアニメは <?php echo $result; ?> です。</p>
     </div>
 
     <footer class="footer">
