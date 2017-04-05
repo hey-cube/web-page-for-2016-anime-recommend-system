@@ -9,7 +9,7 @@ $args = " ";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $args = $args . implode(" ", $_POST);
 } else {
-  exit("error: 不正な入力");
+  exit("error: invalid input");
 }
 
 // シェルのメタ文字をエスケープ
@@ -18,7 +18,7 @@ $cmd = escapeshellcmd("java -classpath " . $classFilePath . $args);
 // コマンドを実行して出力の文字列を取得
 $result = shell_exec($cmd);
 if ($result == false) {
-  exit("error: アニメの推薦に失敗");
+  exit("error: failed");
 }
 
 // $resultからアニメのIDと推定Ratingを取得
