@@ -16,6 +16,8 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="app_icon.png" rel="apple-touch-icon">
     <link href="favicon.ico" rel="icon">
+
+    <object code="AnimeRecommender" name="AnimeRecommenderApplet" width=0, height=0></object>
   </head>
 
   <body>
@@ -23,7 +25,7 @@
       <p>以下のアニメを6段階で評価して下さい。</p>
       <p>（このページの説明は<a href="description.html">こちら</a>）</p>
 
-      <form name="form" action="result.php" method="post">
+      <form name="form">
         <div class="container">
           <div class="col-sm-7">響け！ ユーフォニアム</div>
           <div class="btn-group col-sm-5" data-toggle="buttons">
@@ -2527,7 +2529,8 @@
 
       <div class="container">
         <div class="col-xs-2 col-sm-3"></div>
-        <button type="submit" name="button" class="btn btn-primary col-xs-8 col-sm-6">
+        <button type="button" name="button" class="btn btn-primary col-xs-8 col-sm-6"
+        onclick="mySubmit()">
           結果を見る <i class="fa fa-hand-o-right" aria-hidden="true"></i>
         </button>
         <div class="col-xs-2 col-sm-3"></div>
@@ -2545,5 +2548,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

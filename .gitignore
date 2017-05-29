@@ -6,16 +6,17 @@ css/*
 
 fonts/
 
-js/
+js/*
+!js/main.js
 
 group_lens/
 
 animeImage/
 
+other/
+
 app_icon.png
 favicon.ico
-
-titles.txt
 
 *.java
 *.class
